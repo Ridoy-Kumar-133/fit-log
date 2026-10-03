@@ -19,7 +19,7 @@ const Navbar = () => {
 
     return (
         <div className="border-b border-gray-500 sm:flex items-center justify-center">
-            <div className="bg-black text-white flex flex-col navbar  shadow-sm relative sm:flex-row w-[95%] m-auto">
+            <div className="bg-black text-white flex flex-col navbar  shadow-sm relative sm:flex-row w-[90%] m-auto">
                 <div className="navbar-start">
                     <div className="sm:flex">
                         <div className="mx-3">
