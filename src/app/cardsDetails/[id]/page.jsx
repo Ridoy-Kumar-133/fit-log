@@ -1,5 +1,7 @@
 import React from "react";
 import Image from "next/image";
+import TodaysPlanButton from "../todaysPlanButton";
+import SaveLater from "../saveLaterButton";
 
 const getPromiseSingle = async (id) => {
     try {
@@ -123,13 +125,9 @@ const CardDetail = async ({ params }) => {
                     </div>
 
                     <div className="flex gap-3 mt-7">
-                        <button className="btn bg-[#C2F800] text-black border-none">
-                            Add to today&apos;s plan
-                        </button>
+                       <TodaysPlanButton data={data} ></TodaysPlanButton>
 
-                        <button className="btn btn-outline">
-                            Save for later
-                        </button>
+                       <SaveLater data={data}></SaveLater>
                     </div>
                 </div>
             </div>

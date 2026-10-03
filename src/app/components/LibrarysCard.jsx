@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const LibrarysCard = ({ data }) => {
+  
 
   const { id, name, image, muscleGroups, equipment, duration, caloriesBurned, rating} = data;
 
@@ -15,6 +16,7 @@ const LibrarysCard = ({ data }) => {
         <Image
           src={image}
           alt={name}
+          sizes='...'
            fill
           className="w-full h-full object-fill"
         />

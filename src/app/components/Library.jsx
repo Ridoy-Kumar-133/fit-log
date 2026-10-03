@@ -1,13 +1,20 @@
-'use client';
+
 import React, { useContext } from 'react';
-import { GymContext } from '../gryComtext';
 import LibrarysCard from './LibrarysCard';
 
+const getPromise = async () =>{
+   try{
+    const res = await fetch('https://api.api-store.workers.dev/api/fitlog');
+    return res.json();
+   }catch(error){
+    throw new Error("Did'nt get data.");
+   }
+}
 
+const Library = async () => {
+   
 
-const Library = () => {
-
- const allData = useContext(GymContext);
+ const allData = await getPromise();
 
     return (
         <div className=''>
