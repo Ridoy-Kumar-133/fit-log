@@ -9,9 +9,6 @@ const Library = () => {
 
  const allData = useContext(GymContext);
 
- console.log(allData);
-console.log(Array.isArray(allData));
-
     return (
         <div className=''>
             

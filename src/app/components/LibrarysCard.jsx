@@ -1,23 +1,16 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const LibrarysCard = ({ data }) => {
 
-  const {
-    name,
-    image,
-    muscleGroups,
-    equipment,
-    duration,
-    caloriesBurned,
-    rating
-  } = data;
+  const { id, name, image, muscleGroups, equipment, duration, caloriesBurned, rating} = data;
 
 
   return (
+    <Link href={`/cardsDetails/${id}`}>
     <div className="bg-[#15171d] rounded-xl overflow-hidden border border-gray-800">
 
-      {/* Image */}
       <div className="w-full h-45 relative">
         <Image
           src={image}
@@ -27,10 +20,10 @@ const LibrarysCard = ({ data }) => {
         />
       </div>
 
-      {/* Card Content */}
+      
       <div className="p-5">
 
-        {/* Muscle Groups */}
+        
         <div className="flex gap-2 mb-3">
           {muscleGroups.map((muscle, index) => (
             <span
@@ -42,39 +35,33 @@ const LibrarysCard = ({ data }) => {
           ))}
         </div>
 
-        {/* Name */}
         <h2 className="text-lg font-bold uppercase">
           {name}
         </h2>
 
-        {/* Equipment */}
         <p className="text-sm text-gray-400 mt-1">
           {equipment}
         </p>
 
-        {/* Divider */}
+        
         <div className="border-t border-gray-800 my-4"></div>
 
-        {/* Information */}
         <div className="flex items-center gap-4 text-xs text-gray-400">
-
           <p>
             ◷ {duration} min
           </p>
-
           <p>
             ● {caloriesBurned} kcal
           </p>
-
           <p>
             ☆ {rating}
           </p>
-
         </div>
 
       </div>
 
     </div>
+    </Link>
   );
 };
 
