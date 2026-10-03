@@ -1,19 +1,43 @@
+"use client";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import footerlogo from "@/app/assets/logo.png";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
+    const pathname = usePathname();
+
+    console.log(pathname);
+
     const links = (
         <>
-            <li>
-                <Link
-                    href="/"
-                    className="font-semibold  px-3 py-2 rounded-3xl bg-[#C2F800]/15 text-lime-400 text-[10px]"
-                >
-                    Workouts
-                </Link>
-            </li>
+            <div className="flex gap-2">
+                <li>
+                    <Link
+                        href="/"
+                        className={`font-semibold px-3 py-2 rounded-3xl text-[10px] ${
+                            pathname === "/"
+                                ? "bg-[#C2F800]/15 text-lime-400"
+                                : "text-gray-400"
+                        }`}
+                    >
+                        Workouts
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        href="/myPlan"
+                        className={`font-semibold px-3 py-2 rounded-3xl text-[10px] ${
+                            pathname === "/myPlan"
+                                ? "bg-[#C2F800]/15 text-lime-400"
+                                : "text-gray-400"
+                        }`}
+                    >
+                        My Plan
+                    </Link>
+                </li>
+            </div>
         </>
     );
 
@@ -31,7 +55,7 @@ const Navbar = () => {
                     </div>
                 </div>
 
-                <div className="mt-4 sm:mt-0  list-none">{links}</div>
+                <div className="mt-4 sm:mt-0 w-75   list-none">{links}</div>
 
                 <div>
                     <div></div>

@@ -35,7 +35,7 @@ const CardDetail = async ({ params }) => {
     return (
         <div className="w-[90%] mx-auto py-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-                <div className="relative w-full h-[700px]">
+                <div className="relative w-full h-175">
                     <Image
                         src={image}
                         alt={name}

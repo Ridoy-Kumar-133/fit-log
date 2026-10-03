@@ -15,8 +15,8 @@ const LibrarysCard = ({ data }) => {
         <Image
           src={image}
           alt={name}
-          fill
-          className="object-cover"
+           fill
+          className="w-full h-full object-fill"
         />
       </div>
 

@@ -21,7 +21,7 @@ const Library = () => {
                 </div>
             </div>
                
-            <div className='grid grid-cols-3 gap-4 w-[90%] m-auto mt-5'>
+            <div className='grid grid-cols-1 gap-4 w-[90%] m-auto mt-5 sm:grid-cols-3'>
                  {
                   allData.map( data => <LibrarysCard key={data.id} data = {data} ></LibrarysCard> )  
                 }
