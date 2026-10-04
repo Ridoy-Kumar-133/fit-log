@@ -1,6 +1,6 @@
  🏋️ FitLog - Workout Library
 
- git Hub link : https://github.com/Ridoy-Kumar-133/fit-log.git
+ git Hub link : https://github.com/Ridoy-Kumar-133/fit-log.git <br>
  Netlyfy Live Link : https://fit-log-123.netlify.app/
 
 📖 About The Project
