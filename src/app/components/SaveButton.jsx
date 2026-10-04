@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { GymContext } from '../gryComtext';
+import { toast } from 'react-toastify';
 
 const SaveButton = ({data}) => {
 
@@ -11,6 +12,7 @@ const SaveButton = ({data}) => {
         setSavelater(
             saveLater.filter( item => item.id !== id )
         );
+        toast.success("Delete succesfully");
     }
 
     return (

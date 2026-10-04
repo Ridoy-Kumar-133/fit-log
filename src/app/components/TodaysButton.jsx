@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { GymContext } from '../gryComtext';
+import { toast } from 'react-toastify';
 
 const TodaysButton = ({data}) => {
 
@@ -11,6 +12,7 @@ const TodaysButton = ({data}) => {
         setTodaysPlan(
             todaysPlan.filter( item => item.id !== id )
         );
+        toast.success("Remove succesfull");
     }
 
     return (

@@ -3,6 +3,14 @@ import "./globals.css";
 import Navbar from "./shareComponents/Navbar";
 import Footer from "./shareComponents/Footer";
 import GymContextProvider from './gryComtext';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { Oswald } from "next/font/google";
+
+const oswald = Oswald({
+  variable: "--font-oswald",
+  subsets: ["latin"],
+});
 
 
 const geistSans = Geist({
@@ -25,7 +33,7 @@ export default function RootLayout({ children }) {
     <html
       lang="en"
       data-theme = "dark"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${oswald.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-black text-white">
        
@@ -34,9 +42,8 @@ export default function RootLayout({ children }) {
           <Navbar></Navbar>
         {children}
         <Footer></Footer>
-
+           <ToastContainer />
          </GymContextProvider>
-  
         </body>
     </html>
   );

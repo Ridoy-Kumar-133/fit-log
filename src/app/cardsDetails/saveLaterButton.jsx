@@ -1,6 +1,8 @@
 'use client';
 import React, { useContext } from "react";
 import { GymContext } from "../gryComtext";
+import {  Bookmark } from "lucide-react";
+import { toast } from "react-toastify";
 
 const SaveLater = ({data}) => {
 
@@ -14,6 +16,7 @@ const SaveLater = ({data}) => {
                 return;
             }
               setSavelater([...saveLater,data]);
+              toast.success("Added to Save Later");
             
 
              
@@ -25,7 +28,7 @@ const SaveLater = ({data}) => {
     onClick={() =>handleOnclick()}
     disabled={alreadySaved}
      className="btn btn-outline">
-        Save for later
+      <Bookmark size={17} strokeWidth={2} />  Save for later
      </button>
      );
 };

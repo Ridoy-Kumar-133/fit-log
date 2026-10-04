@@ -1,5 +1,7 @@
+
 import React, { useContext, useState } from 'react';
 import { GymContext } from '../gryComtext';
+import { toast } from 'react-toastify';
 
 const SetMartForSave = ({data}) => {
 
@@ -9,6 +11,7 @@ const SetMartForSave = ({data}) => {
 
     const handleClick = () =>{
         setDone([...done,id]);
+        toast.success(`${data.id} mark as Read`);
     }
 
     if(done.includes(id)) {

@@ -47,7 +47,7 @@ const CardDetail = async ({ params }) => {
                 </div>
 
                 <div>
-                    <h1 className="text-4xl font-bold">{name}</h1>
+                    <h1 className="text-4xl font-bold font-oswald">{name}</h1>
                     <p className="text-gray-400 mt-3">{description}</p>
 
                     <div className="flex gap-2 mt-5">

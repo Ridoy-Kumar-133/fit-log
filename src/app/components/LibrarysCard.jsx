@@ -37,7 +37,7 @@ const LibrarysCard = ({ data }) => {
           ))}
         </div>
 
-        <h2 className="text-lg font-bold uppercase">
+        <h2 className="text-lg font-bold uppercase font-oswald ">
           {name}
         </h2>
 

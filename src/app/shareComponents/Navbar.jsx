@@ -51,7 +51,7 @@ const Navbar = () => {
                             <Image src={footerlogo} alt="img"></Image>
                         </div>
                         <div>
-                            <h4>FITLOG</h4>
+                            <h4 className="font-oswald">FITLOG</h4>
                         </div>
                     </div>
                 </div>

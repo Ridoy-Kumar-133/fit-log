@@ -17,6 +17,8 @@ const MyPlanPage = () => {
             sortedDatas.sort( (a,b) => b.duration - a.duration );
         }else if(sortby === 'calories'){
            sortedDatas.sort( (a,b) => b.caloriesBurned - a.caloriesBurned )
+        }else if(sortby === 'rating'){
+            sortedDatas.sort( (a,b) => b.rating - a.rating )
         }
         return sortedDatas;
     }
@@ -76,6 +78,7 @@ const MyPlanPage = () => {
                     <option disabled={true}>Sort by</option>
                     <option value={'duration'}>Duration</option>
                     <option value={'calories'}>Calories</option>
+                    <option value={'rating'}>Rating</option>
                     
                 </select>
             </div>

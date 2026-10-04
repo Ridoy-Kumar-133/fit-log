@@ -13,7 +13,7 @@ const HeroSection = () => {
                         <p className='text-[10px] font-semibold text-[#C2F800]'>WORKOUT LIBRARY</p>
                     </div>
                     <div>
-                        <h1 className='text-4xl font-bold'>TRAIN WITH INTENT. LOG<br></br>
+                        <h1 className='text-4xl font-bold font-oswald'>TRAIN WITH INTENT. LOG<br></br>
                          EVERY SET.</h1>
                     </div>
                     <div>

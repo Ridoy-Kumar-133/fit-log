@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { GymContext } from '../gryComtext';
+import { toast } from 'react-toastify';
 
 const SetMartForToday = ({data}) => {
 
@@ -9,6 +10,7 @@ const SetMartForToday = ({data}) => {
 
     const handleClick = () =>{
         setDone([...done,id]);
+        toast.success("✓ Mark as Done");
     }
 
     if(done.includes(id)) {
