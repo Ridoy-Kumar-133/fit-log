@@ -4,7 +4,11 @@ import LibrarysCard from './LibrarysCard';
 
 const getPromise = async () =>{
    try{
-    const res = await fetch('https://api.api-store.workers.dev/api/fitlog');
+    const res = await fetch('https://api.api-store.workers.dev/api/fitlog',
+        {
+            cache: 'force-cache',
+        }
+    );
     return res.json();
    }catch(error){
     throw new Error("Did'nt get data.");
