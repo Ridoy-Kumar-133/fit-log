@@ -1,14 +1,15 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import footerlogo from "@/app/assets/logo.png";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { GymContext } from "../gryComtext";
 
 const Navbar = () => {
     const pathname = usePathname();
 
-    console.log(pathname);
+    const { todaysPlan, saveLater } = useContext(GymContext);
 
     const links = (
         <>
@@ -43,8 +44,8 @@ const Navbar = () => {
 
     return (
         <div className="border-b border-gray-500 sm:flex items-center justify-center">
-            <div className="bg-black text-white flex flex-col navbar  shadow-sm relative sm:flex-row w-[90%] m-auto">
-                <div className="navbar-start">
+            <div className="bg-black text-white flex flex-col sm:flex-row items-center w-[90%] m-auto py-4">
+                <div className="flex items-center">
                     <div className="sm:flex">
                         <div className="mx-3">
                             <Image src={footerlogo} alt="img"></Image>
@@ -55,14 +56,25 @@ const Navbar = () => {
                     </div>
                 </div>
 
-                <div className="mt-4 sm:mt-0 w-75   list-none">{links}</div>
+               <div className="mt-4 sm:mt-0 list-none sm:absolute sm:left-1/2 sm:-translate-x-1/2">
+    {links}
+</div>
 
-                <div>
-                    <div></div>
-                    <div></div>
+                <div className="flex gap-4 items-center sm:ml-auto mt-4 sm:mt-0">
+                    <div className="flex gap-1 justify-center items-center">
+                        <p>Plan</p>
+                        <button className="bg-[#C2F800] w-5 h-5 rounded-full text-black text-xs font-bold">
+                            {todaysPlan.length}
+                        </button>
+                    </div>
+
+                    <div className="flex gap-1 justify-center items-center ml-2">
+                        <p>Saved</p>
+                        <button className="bg-gray-700 w-5 h-5 rounded-full text-white text-xs font-bold">
+                            {saveLater.length}
+                        </button>
+                    </div>
                 </div>
-
-                <div className="navbar-end"></div>
             </div>
         </div>
     );

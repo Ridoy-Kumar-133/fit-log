@@ -7,12 +7,16 @@ const GymContextProvider = ({ children }) => {
 
   const [todaysPlan, setTodaysPlan] = useState([]);
   const [saveLater, setSavelater] = useState([]);
+  const [done,setDone] = useState([]);
+  
 
   const data = {
     todaysPlan,
     setTodaysPlan,
     saveLater,
-    setSavelater
+    setSavelater,
+    done,
+    setDone
   }
 
 
